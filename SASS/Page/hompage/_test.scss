@@ -1,0 +1,67 @@
+.testmonial {
+    margin-top: 90px;
+    width: 100%;
+    background: linear-gradient(to top, rgb(4, 1, 183), rgba(0, 0, 0, 0.55)), url(../img/testi-bg.jpg);
+    background-size: cover;
+    padding: 30px 15px 30px 15px;
+    .testmonial__header {
+        @extend .headertext;
+        margin-top: 30px;
+        h5,
+        h1 {
+            color: white;
+        }
+    }
+    .testimonial_carosel {
+        max-width: 1100px;
+        padding: 30px;
+        margin: 20px auto;
+        .testi-carousel {
+            .item {
+                margin-left: 30px;
+                .item__content {
+                    .text {
+                        position: relative;
+                        background-color: white;
+                        border-radius: 10px;
+                        p {
+                            color: rgb(47, 47, 47);
+                            font-size: 20px;
+                            padding: 50px 20px;
+                            font-weight: 600;
+                        }
+                    }
+                    .text::before {
+                        display: block;
+                        content: "";
+                        border: 20px solid transparent;
+                        border-top-color: rgb(255, 255, 255);
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    .info {
+                        h5 {
+                            font-size: 23px;
+                            color: white;
+                        }
+                        p {
+                            font-size: 16px;
+                            color: white;
+                            padding: 0;
+                        }
+                        img {
+                            margin: 30px auto 10px auto;
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+    }
+}

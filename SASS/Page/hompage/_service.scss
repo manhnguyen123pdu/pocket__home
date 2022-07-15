@@ -1,0 +1,42 @@
+.service {
+    .service__header {
+        @extend .headertext;
+    }
+    .service__content {
+        display: flex;
+        max-width: 1120px;
+        align-items: center;
+        margin: auto;
+        padding: 0 15px;
+        .service__left {
+            .service__item {
+                @extend .service__itemex;
+                .service__item-left {
+                    text-align: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .service__mid {
+            img {
+                padding: 20px;
+                width: 350px;
+            }
+        }
+        .service__right {
+            .service__item {
+                @extend .service__itemex;
+                .service__item-left {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+@include respon("large") {
+    .service {
+        .service__content {
+            flex-direction: column;
+        }
+    }
+}

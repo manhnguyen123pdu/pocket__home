@@ -1,0 +1,188 @@
+.header__top {
+    background-color: $color-blue-light;
+    color: white;
+    padding: 12px 0;
+    .row {
+        width: 90%;
+        margin: auto;
+    }
+    .headertop__left {
+        i {
+            font-size: 12px;
+        }
+        span {
+            display: inline-block;
+            margin-right: 25px;
+        }
+    }
+    .headertop__right {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        i {
+            font-size: 14px;
+            padding: 0 10px;
+            transition: 0.3s;
+            &:hover {
+                color: $color-blue-dark;
+            }
+        }
+    }
+}
+.nav1 {
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    z-index: 12;
+    background-color: rgb(255, 255, 255);
+    .row {
+        width: 90%;
+        margin: auto;
+        line-height: 45px;
+
+    }
+    .nav1__left {
+        height: 100%;
+        padding: 25px;
+        img {
+            height: 45px;
+        }
+    }
+    .nav1__right {
+        > ul {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            list-style: none;
+            margin: 0;
+            >li {
+                padding: 25px 10px;
+                position: relative;
+                &:hover .nav_overlay {
+                    animation: 0.5s navani forwards;
+                }
+                .nav_overlay {
+                    background-color: white;
+                    width: 270px;
+                    position: absolute;
+                    top: 85px;
+                    opacity: 0;
+                    visibility: hidden;
+                    ul {
+                        list-style: none;
+                        font-size: 20px;
+                        margin-left: 15px;
+                        li {
+                            padding: 10px 0;
+                            line-height: 30px;
+                            a {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                a {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $color-blue-dark;
+                    text-decoration: none;
+                }
+                i {
+                    font-size: 13px;
+                    padding: 4px;
+                    color: black;
+                }
+                .navicon {
+                    background-color: $color-blue-light;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 14px;
+                    border-radius: 50%;
+                    color: white;
+                }
+                .shopping-basket {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.nav__mobile {
+    .logonav__mobile {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .navmobile__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-blue-light;
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .navmobi__overlay {
+display: none;
+        ul {
+            list-style: none;
+            li {
+                color: $color-blue-dark;
+                font-size: 16px;
+                padding: 10px 0 10px  20px;
+                border-bottom: 1px solid rgb(212, 212, 212);
+            }
+        }
+    }
+}
+
+//slide
+
+
+
+.visible{
+display: contents!important;
+z-index: 111;
+    animation: .3s navani forwards;
+} 
+
+
+//ani
+@keyframes navani {
+    from {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+
+//respon
+@media (max-width: 995px) {
+    .header__top {
+        .row {
+            width: 100%;
+        }
+    }
+    .nav1 {
+        display: none;
+    }
+}
+@media (min-width: 994px) {
+    .nav__mobile {
+        display: none;
+    }
+}
+@media (max-width: 810px) {
+    .header__top {
+        display: none;
+    }
+}
+

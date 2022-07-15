@@ -1,0 +1,117 @@
+.aboutus {
+    background-color: #eeecec;
+    padding-bottom: 20px;
+    .aboutus__content {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        .aboutus__left {
+            flex: 1;
+            img {
+                width: 100%;
+            }
+        }
+        .aboutus__right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .aboutusright__content {
+                width: 90%;
+                margin-top: 4.5vh;
+                padding-left: 2vw;
+                @extend .textcontent;
+                h4 {
+                    margin: 25px 0 13px 0;
+                }
+            }
+            .about__contact {
+                margin-top: 50px;
+                padding-left: 3vw;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                .aboucontact_left {
+                    font-size: 40px;
+                    background-color: $color-blue-light;
+                    color: white;
+                    width: 80px;
+                    height: 80px;
+                    text-align: center;
+                    line-height: 80px;
+                    border-radius: 50%;
+                }
+                .aboucontact_right {
+                    padding-left: 20px;
+                    h5 {
+                        font-weight: 900;
+                        color: $color-blue-dark;
+                    }
+                    h4 {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+        @include respon("extra-large") {
+            .aboutus{
+                .aboutus__content {
+                    .aboutus__right {
+                        .aboutusright__content {
+                            h1 {
+                                font-size: 30px;
+                            }
+                        }
+                        .about__contact {
+                            .aboucontact_left {
+                                width: 66px;
+                                height: 65px;
+                                line-height: 65px;
+                                i {
+                                    font-size: 30px;
+                                }
+                            }
+                            .aboucontact_right {
+                                h5 {
+                                    font-size: 18px;
+                                }
+                                h4 {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+
+
+@include respon("large") {
+    .aboutus{
+        margin-top: 20px;
+        .aboutus__content {
+            flex-direction: column;
+            .aboutus__right {
+                .aboucontact_left {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                .aboutusright__content {
+                    width: 100%;
+                    h1 {
+                        font-size: 26px;
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+    

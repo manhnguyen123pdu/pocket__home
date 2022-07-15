@@ -1,0 +1,97 @@
+.process{
+    margin-top: 90px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(4, 0, 255, 0.916), rgba(0, 0, 0, 0.55)), url(https://themexbd.com/poket/dron/wp-content/uploads/2021/10/process-bg.jpg);
+    background-size: cover;
+    padding: 30px 15px 80px 15px;
+    .process__header{
+        @extend .headertext;
+        h5,h1{
+            color: white;
+        }
+    }
+    .process__content{
+        max-width: 1150px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        .process__item{
+            background-color: white;
+            width: 23.5%;
+            height: 300px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            &:hover h1{
+                opacity: 1;
+                transform: scale(1.4);
+                transform-origin: 100% 0%;
+            }
+            h1{
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                font-weight: 700;
+                font-size: 50px;
+                color: rgba(0, 0, 255, 0.196);
+                transition: 0.6s;
+            }
+            .processitem__content{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translatey(-50%) translatex(-50%);
+                i{
+                    font-size: 40px;    
+                    color: $color-blue-light;        
+                }
+                p{
+                    margin:15px 0 0 0 ;
+                    font-size: 16px;    
+                    font-weight: 600;
+                    color: $color-blue-light;     
+                }
+                h4{
+                    font-size: 22px;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    color: $color-blue-dark;
+                }
+                a{
+                    display: block;
+                    margin-top: 30px;
+                    font-weight: 700;
+                    font-size: 17px;
+                    color: $color-blue-light;
+                    text-decoration: none;
+                                
+                }
+            }
+           
+        }
+    }
+}
+@include respon("large"){
+    .process{
+        .process__content{
+            flex-wrap: wrap;
+            .process__item{
+                width: 48.5%;
+                margin: 17px 0;
+            }
+        }
+    }
+}
+
+@include respon("small"){
+    .process{
+        .process__content{
+            flex-wrap: wrap;
+            .process__item{
+                width: 100%;
+                margin: 17px 0;
+            }
+        }
+    }
+}

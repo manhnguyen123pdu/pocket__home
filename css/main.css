@@ -491,8 +491,12 @@ html {
   .aboutus .aboutus__content .aboutus__right .aboutusright__content h1 {
     font-size: 30px;
   }
+  .aboutus .aboutus__content .aboutus__right .about__contact {
+    padding: 0;
+    width: 100%;
+  }
   .aboutus .aboutus__content .aboutus__right .about__contact .aboucontact_left {
-    width: 66px;
+    width: 65px;
     height: 65px;
     line-height: 65px;
   }
@@ -527,6 +531,14 @@ html {
   .aboutus .aboutus__content .aboutus__right .aboutusright__content h1 {
     font-size: 26px;
     display: inline;
+  }
+}
+@media screen and (max-width: 576px) {
+  .aboutus .aboutus__content .aboutus__right .about__contact .aboucontact_right h5 {
+    font-size: 16px;
+  }
+  .aboutus .aboutus__content .aboutus__right .about__contact .aboucontact_right h4 {
+    font-size: 18px;
   }
 }
 .service .service__content {
@@ -749,6 +761,10 @@ html {
   }
   .intro0 .itron0__content .intro__video {
     width: 100%;
+  }
+  .backup1 iframe {
+    height: 60vh;
+    width: 90vw;
   }
 }
 .team .team__content {

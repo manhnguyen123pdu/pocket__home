@@ -65,8 +65,10 @@
                             }
                         }
                         .about__contact {
+                            padding: 0;
+                            width: 100%;
                             .aboucontact_left {
-                                width: 66px;
+                                width: 65px;
                                 height: 65px;
                                 line-height: 65px;
                                 i {
@@ -114,4 +116,25 @@
         }
     }
 }
-    
+@include respon("small") {
+    .aboutus{
+        .aboutus__content {
+            .aboutus__right {
+                .about__contact {
+                    .aboucontact_left {
+                        i {
+                        }
+                    }
+                    .aboucontact_right {
+                        h5 {
+                            font-size: 16px;
+                        }
+                        h4 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
